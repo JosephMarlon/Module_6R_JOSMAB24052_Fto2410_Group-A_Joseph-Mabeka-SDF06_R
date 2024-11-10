@@ -21,3 +21,138 @@ body {
 img {
     display: block;
 }
+/*profile*/
+
+
+.profile-image{
+width: 150px;
+height: 150px;
+
+border: #262626;
+border-radius: 50%;
+border-style: solid;
+overflow: hidden;
+margin-left: 30%;
+
+}
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.profile-user-settings{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 45%;
+    position: absolute;
+    top: 40px;
+    text-decoration: none;
+
+}
+
+
+button.btn {
+    top: 10px;
+    margin-top: 15px;
+    height: fit-content;
+  
+}
+
+
+ul {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+    margin-left: 40%;
+    margin-top: -3%;
+    margin-bottom: 10%;
+    
+}
+.profile-bio {
+    margin-left: 40%;
+    margin-bottom: 10%;
+    margin-top: -9%;
+}
+
+/*Gallery*/
+.grid-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px; /* Space between items */
+    max-width: 900px; /* Optional: to center the gallery */
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 200px; /* Fixed height for all images */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fill the container without distortion */
+    display: block;
+  }
+  
+  .gallery-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff; /* White text */
+    padding: 5px;
+    display: none; /* Hide initially */
+    justify-content: space-between;
+  }
+  
+  .gallery-item-info ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .gallery-item-likes,
+  .gallery-item-comments {
+    display: flex;
+    align-items: center;
+  }
+  
+  .fa-heart,
+  .fa-comment {
+    margin-right: 5px;
+  }
+  
+  /* Show gallery-item-info on hover or focus */
+  .gallery-item:hover .gallery-item-info,
+  .gallery-item:focus .gallery-item-info {
+    display: flex;
+  }
+  
+  /* Optional: Responsive design for smaller screens */
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .gallery {
+      grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+  }
+  
